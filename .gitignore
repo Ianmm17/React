@@ -7,3 +7,4 @@
 /dataSources/
 /dataSources.local.xml
 .idea
+./01-starting-setup/node_modules
