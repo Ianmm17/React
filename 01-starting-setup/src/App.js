@@ -1,11 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
 import ExpensesFilter from "./components/Expenses/ExpensesFilter";
 
-function App() {
-    const expenses = [
+const dummy_expenses =
+    [
         {
             id: 'e1',
             title: 'Toilet Paper',
@@ -27,9 +27,13 @@ function App() {
         },
     ];
 
+function App() {
+    const [expenses, setExpenses] = useState(dummy_expenses)
+
     function addExpenseHandler(expense) {
-        console.log('in App.js')
-        console.log(expense)
+        setExpenses(function (prevExpenses) {
+            return [expense, ...prevExpenses]
+        })
     }
 
     // return React.createElement(
