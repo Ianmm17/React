@@ -2,7 +2,7 @@ import React from "react";
 
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
-import ExpenseFilter from "./components/Expenses/ExpenseFilter";
+import ExpensesFilter from "./components/Expenses/ExpensesFilter";
 
 function App() {
     const expenses = [
